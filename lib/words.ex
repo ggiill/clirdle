@@ -2321,6 +2321,6 @@ defmodule Clirdle.Words do
 
   def get_todays_word do
     days_since_start = Date.diff(Date.utc_today(), @starting_date)
-    Enum.at(@words, days_since_start - 1)
+    Enum.at(@words, days_since_start)
   end
 end

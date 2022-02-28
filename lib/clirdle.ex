@@ -4,7 +4,7 @@ defmodule Clirdle do
   @rounds ["1st", "2nd", "3rd", "4th", "5th", "6th (last)"]
 
   def main(args) do
-    {options, _, _} = OptionParser.parse(args, switches: [word: :string, light: :boolean])
+    {options, _, _} = OptionParser.parse(args, switches: [light: :boolean])
 
     new_game = %{
       word: Words.get_todays_word(),
