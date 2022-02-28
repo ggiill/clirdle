@@ -35,7 +35,7 @@ defmodule Clirdle do
     game_result =
       if Guesses.is_valid_guess?(guess) do
         {feedback, to_share} = create_guess_feedback(word, guess, options)
-        guesses_updated = guesses ++ [feedback]
+        guesses_updated = guesses ++ [Enum.join(feedback, " ")]
         guesses_updated |> Enum.join("\n") |> IO.puts()
         IO.puts("")
         share_updated = share ++ [to_share]
